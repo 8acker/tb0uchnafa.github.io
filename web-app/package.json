@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/tb0uchnafa/tb0uchnafa.github.io/issues"
   },
-  "homepage": "https://tb0uchnafa.github.io",
+  "homepage": "https://tb0uchnafa.github.io/web-app",
   "keywords": [
     "Thami",
     "Bouchnafa",
@@ -21,7 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "mv build ../docs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "fresh-install": "rm -rf node_modules && npm install"
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
